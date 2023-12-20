@@ -1,8 +1,5 @@
 /* React Select */
 .react-select {
-	&-menu-outer {
-		z-index: 999 !important;
-	}
 	&__control {
 		@apply px-4 py-2;
 		background-color: #242529 !important;

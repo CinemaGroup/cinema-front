@@ -57,6 +57,8 @@ const ReactSelect: FC<IReactSelect> = ({
 					components={animatedComponents}
 					isLoading={isLoading}
 					placeholder={placeholder || ''}
+					menuPortalTarget={document.body}
+					menuPosition={'fixed'}
 				/>
 			) : (
 				<Select
@@ -70,6 +72,8 @@ const ReactSelect: FC<IReactSelect> = ({
 					components={animatedComponents}
 					isLoading={isLoading}
 					placeholder={placeholder || ''}
+					menuPortalTarget={document.body}
+					menuPosition={'fixed'}
 				/>
 			)}
 		</div>
