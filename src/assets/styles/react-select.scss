@@ -1,5 +1,8 @@
 /* React Select */
 .react-select {
+	&-menu-outer {
+		z-index: 999 !important;
+	}
 	&__control {
 		@apply px-4 py-2;
 		background-color: #242529 !important;
@@ -21,11 +24,11 @@
 	&__input-container {
 		padding: 0 !important;
 		margin: 0 !important;
-		color: rgba(255,255,255,.96) !important;
+		color: rgba(255, 255, 255, 0.96) !important;
 	}
 
-	&__single-value{
-		color: rgba(255,255,255,.96) !important;
+	&__single-value {
+		color: rgba(255, 255, 255, 0.96) !important;
 	}
 
 	&__control {
@@ -60,7 +63,7 @@
 
 	&__multi-value__label {
 		font-size: 80% !important;
-		color: rgba(255,255,255,.96) !important;
+		color: rgba(255, 255, 255, 0.96) !important;
 	}
 
 	&__multi-value__remove {
@@ -77,6 +80,7 @@
 		margin: 0 !important;
 		background-color: #292a2e !important;
 		color: rgba(white, 0.6) !important;
+		z-index: 30 !important;
 
 		&-list {
 			padding: 0 !important;

@@ -1,0 +1,2 @@
+1.Toggle visibility
+2.Video Bitrate change dinamically

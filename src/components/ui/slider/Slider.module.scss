@@ -1,0 +1,21 @@
+.wrapper {
+	@apply w-full relative overflow-hidden;
+}
+.prev,
+.next {
+	@apply absolute z-1 p-2 bg-gray-700 rounded-full transition-colors hover:bg-gray-600/70;
+	top: calc(50% - 22px);
+
+	> svg {
+		@apply w-7 h-7;
+	}
+}
+.prev {
+	@apply left-0;
+}
+.next {
+	@apply right-0;
+}
+.slider{
+	@apply flex;
+}

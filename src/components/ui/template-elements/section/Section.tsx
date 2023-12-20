@@ -5,9 +5,9 @@ import { ISection } from './interface/section.interface'
 
 const Section: FC<PropsWithChildren<ISection>> = ({ children, className }) => {
 	return (
-		<div className={cn(styles.container, className && className)}>
+		<section className={cn(styles.container, className && className)}>
 			{children}
-		</div>
+		</section>
 	)
 }
 
