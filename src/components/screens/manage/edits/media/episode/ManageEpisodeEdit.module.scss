@@ -1,0 +1,21 @@
+.wrapper {
+	@apply pt-16 pb-20;
+}
+.fill {
+	@apply flex items-start flex-wrap gap-10;
+}
+.trailers,
+.videos {
+	max-width: calc(50% - 20px);
+	@apply w-full flex flex-col items-start;
+}
+.editor,
+.upload{
+	max-width: calc(50% - 20px);
+}
+.field {
+	max-width: calc(100% / 3 - 27px);
+}
+.update {
+	@apply flex py-4 px-14 bg-purple-300 mt-20 rounded-medium mx-auto;
+}

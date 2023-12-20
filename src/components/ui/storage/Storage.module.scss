@@ -1,0 +1,9 @@
+.storage {
+	@apply h-full w-full flex items-start gap-20;
+}
+.bar {
+	@apply h-full flex flex-col justify-between gap-10 items-start;
+}
+.addFolder {
+	@apply whitespace-nowrap px-5 py-2;
+}

@@ -1,0 +1,18 @@
+.header{
+	@apply flex items-center justify-between animate-fade;
+
+	> button {
+		@apply bg-gray-700 py-2 px-4 rounded-small transition-colors hover:bg-purple-300;
+	}
+}
+.search {
+	@apply bg-gray-700 rounded-small flex items-center gap-10 px-4;
+
+	> input {
+		@apply bg-transparent outline-border-none py-2.5;
+	}
+
+	> svg {
+		@apply text-smaller;
+	}
+}

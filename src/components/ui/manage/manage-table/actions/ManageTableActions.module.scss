@@ -1,0 +1,21 @@
+.actions {
+	max-width: 200px;
+	@apply w-full flex items-center justify-between;
+}
+.button {
+	@apply bg-gray-700 flex items-center justify-center w-11 h-9 rounded-small transition-colors hover:bg-purple-300;
+}
+.toggle {
+	@apply mr-2 bg-gray-600 w-10 h-5 rounded-full relative transition-colors;
+
+	&.visible {
+		@apply bg-purple-300;
+
+		.switch {
+			left: calc(100% - 20px);
+		}
+	}
+}
+.switch {
+	@apply bg-white rounded-full w-4 h-4 absolute top-0 bottom-0 left-1 my-auto transition-all;
+}

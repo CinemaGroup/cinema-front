@@ -1,0 +1,37 @@
+.field {
+	@apply w-full animate-fade;
+
+	> label {
+		@apply inline-block mb-2;
+	}
+
+	> input {
+		@apply w-full rounded-small outline-border-none bg-gray-800 py-2 px-4;
+
+		&::placeholder {
+			@apply text-gray-500 text-smaller;
+		}
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		&[type='number'] {
+			-moz-appearance: textfield;
+		}
+	}
+}
+.error {
+	@apply text-red-300 font-light text-small mb-2;
+}
+.button {
+	@apply px-4 py-2 rounded-small transition-all;
+	background: linear-gradient(26.57deg, #3c1a70 0%, rgba(93, 14, 245, 0.83));
+
+	&:hover {
+		box-shadow: 0 0 30px 10px rgba(93, 14, 245, 0.3),
+			0 0 50px 30px rgba(93, 14, 245, 0.2), 0 0 60px 40px rgba(60, 26, 112, 0.2);
+	}
+}

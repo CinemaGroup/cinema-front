@@ -1,0 +1,47 @@
+.wrapper {
+	max-width: 400px;
+	@apply w-full text-gray-base;
+}
+.head {
+	@apply text-center border-b border-b-gray-300/40 border-solid pb-4;
+
+	> img {
+		@apply mx-auto;
+	}
+}
+.heading {
+	@apply mt-2.5 font-bold text-2lg;
+	letter-spacing: 1px;
+}
+.footer {
+	@apply font-light mt-6 text-center;
+}
+.privacy {
+	font-size: 15px;
+	> a {
+		@apply text-purple-300;
+	}
+}
+.error {
+	@apply mt-4 text-red-300;
+}
+.subscription {
+	font-size: 15px;
+}
+.or {
+	@apply flex-center-between mt-0.5 mb-2;
+
+	> span {
+		@apply inline-block font-light;
+		font-size: 14px;
+		margin: 0 30px;
+	}
+
+	&::before,
+	&::after {
+		@apply inline-block w-full;
+		height: 1px;
+		content: '';
+		background-color: rgba(113, 116, 136, 0.1);
+	}
+}

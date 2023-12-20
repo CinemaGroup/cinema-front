@@ -1,0 +1,51 @@
+.overlay {
+	@apply w-full h-full fixed top-0 bottom-0 left-0 right-0 z-2 bg-black/75 flex justify-center items-start transition-all duration-500 invisible opacity-0;
+
+	&.show {
+		@apply visible opacity-100;
+
+		.select {
+			@apply opacity-100;
+			transform: translateY(50px);
+		}
+	}
+}
+.select {
+	@apply relative z-3 w-full h-fit bg-gray-700 p-10 rounded-medium transition-all duration-700 opacity-0;
+	max-width: 300px;
+	transform: translateY(-30%);
+}
+.fill {
+	@apply flex flex-col items-center gap-5;
+}
+.folders {
+	@apply w-full flex items-start flex-wrap gap-4;
+}
+.folder {
+	@apply w-full;
+}
+.button {
+	@apply relative w-full flex items-center justify-start gap-3 text-gray-300 rounded-small py-2 px-5 font-medium gradient;
+
+	&::before {
+		@apply absolute inline-block -top-2 -bottom-2 -left-2 -right-2 opacity-0 transition-opacity rounded-small -z-1 inset-1;
+		content: '';
+		background: linear-gradient(#5d0ef5 0 0), linear-gradient(#a076f6 0 0) 27 / 35px;
+	}
+
+	> svg {
+		@apply text-gray-300;
+	}
+
+	&:hover {
+		&::before {
+			@apply opacity-100;
+		}
+	}
+}
+.close {
+	@apply absolute right-5 top-5 text-3lg text-gray-300;
+}
+.heading {
+	@apply text-white text-center text-lg;
+}

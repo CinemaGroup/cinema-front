@@ -1,0 +1,7 @@
+.button {
+	@apply py-2.5 px-2 w-full text-center font-semibold text-gray-950 rounded-small flex items-center justify-center;
+	border: 1px solid rgba(0, 3, 28, 0.1);
+}
+.text{
+	@apply inline-block w-full;
+}

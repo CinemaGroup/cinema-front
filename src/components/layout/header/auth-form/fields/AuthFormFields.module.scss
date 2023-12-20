@@ -1,0 +1,21 @@
+.form {
+	@apply w-full flex flex-col gap-2;
+}
+.field {
+	@apply flex flex-col gap-0.5 animate-fade;
+
+	> label {
+		@apply pointer-events-none text-gray-base font-light;
+		font-size: 15px;
+	}
+
+	> input {
+		@apply bg-transparent rounded-medium transition-all text-gray-base outline-border-none;
+		padding: 8px 20px;
+		border: 1px solid rgba(0, 3, 28, 0.1);
+
+		&:focus {
+			@apply border-purple-300;
+		}
+	}
+}

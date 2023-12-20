@@ -1,0 +1,22 @@
+.menu {
+	@apply flex items-center gap-10;
+}
+.item {
+	line-height: 80px;
+
+	&.current {
+		@apply relative;
+
+		&::after{
+			@apply absolute bottom-0 left-0 right-0 w-full h-0.5 gradient;
+			content: '';
+		}
+
+		.link {
+			@apply text-gray-300;
+		}
+	}
+}
+.link {
+	@apply text-medium text-gray-500 transition-colors hover:text-gray-300;
+}

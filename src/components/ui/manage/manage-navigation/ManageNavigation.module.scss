@@ -1,0 +1,14 @@
+.navigation {
+	@apply mb-10 animate-fade;
+}
+.list{
+	@apply flex items-stretch gap-4;
+}
+.link{
+	min-width: 120px;
+	@apply bg-gray-800 rounded-small py-3 px-5 text-center whitespace-nowrap transition-colors hover:bg-purple-300;
+
+	&.active{
+		@apply bg-purple-300;
+	}
+}

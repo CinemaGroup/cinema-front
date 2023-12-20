@@ -1,0 +1,28 @@
+.overlay {
+	@apply w-full h-full fixed top-0 bottom-0 left-0 right-0 z-2 bg-black/75 flex justify-center items-start transition-all duration-500 invisible opacity-0;
+
+	&.show {
+		@apply visible opacity-100;
+
+		.directory {
+			@apply opacity-100;
+			transform: translateY(50px);
+		}
+	}
+}
+.fill {
+	@apply flex flex-col items-center gap-4;
+}
+.form {
+	@apply w-full flex flex-col gap-4 items-center;
+}
+.close {
+	@apply absolute right-5 top-5 text-3lg text-gray-700;
+}
+.heading {
+	@apply text-gray-900 text-center text-lg;
+}
+.create {
+	@apply text-small;
+	padding: 12px 20px;
+}

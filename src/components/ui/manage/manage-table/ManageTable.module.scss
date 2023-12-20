@@ -1,0 +1,29 @@
+.wrapper {
+	@apply mt-5 flex flex-col gap-2 animate-fade;
+}
+.items {
+	@apply flex flex-col gap-2;
+}
+.item {
+	@apply flex items-center justify-between bg-gray-700 px-5 rounded-medium animate-fade;
+}
+.value {
+	max-width: 25%;
+	@apply w-full py-3;
+}
+.headerItem {
+	@apply flex items-center justify-between bg-purple-300 bg-opacity-50 shadow-lg;
+}
+.headerValue {
+	max-width: 25%;
+	@apply w-full font-semibold py-2.5;
+
+	&:last-child {
+		max-width: 200px;
+		@apply w-full text-center;
+	}
+}
+.notFound {
+	@apply text-center py-3;
+	font-size: 18px;
+}

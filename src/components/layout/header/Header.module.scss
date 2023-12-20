@@ -1,0 +1,12 @@
+.header{
+	@apply w-full animate-fade;
+}
+.wrapper{
+	@apply flex-center-between;
+}
+.left{
+	@apply flex items-center gap-16;
+}
+.right{
+	@apply flex items-center gap-10;
+}

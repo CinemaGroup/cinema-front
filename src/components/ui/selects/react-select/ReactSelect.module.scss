@@ -1,0 +1,10 @@
+.selectContainer {
+	@apply w-full relative z-1 animate-fade;
+}
+.error {
+	@apply text-red-300 font-light text-small mb-2;
+}
+.label {
+	@apply inline-block mb-2;
+}
+

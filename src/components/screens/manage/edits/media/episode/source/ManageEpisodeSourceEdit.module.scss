@@ -1,0 +1,21 @@
+.button{
+	@apply flex items-center whitespace-nowrap gap-3;
+}
+.sources{
+	@apply w-full flex flex-col items-start gap-8;
+}
+.source{
+	@apply w-full flex flex-col items-start gap-4;
+}
+.items{
+	@apply w-full flex flex-col items-start gap-3;
+}
+.item{
+	@apply w-full flex items-end gap-10;
+}
+.itemFill{
+	@apply w-full flex items-start gap-10;
+}
+.itemField{
+	max-width: calc(50% - 20px);
+}

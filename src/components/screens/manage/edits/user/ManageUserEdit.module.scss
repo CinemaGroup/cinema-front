@@ -1,0 +1,17 @@
+.wrapper {
+	@apply py-20;
+}
+.form {
+	@apply flex flex-col items-center gap-20;
+}
+.fill {
+	@apply w-full flex items-start flex-wrap gap-8;
+}
+.field,
+.upload,
+.select {
+	max-width: calc(50% - 16px);
+}
+.submit {
+	@apply px-10 py-3;
+}

@@ -1,0 +1,18 @@
+.folders {
+	@apply flex flex-col gap-5 pr-10;
+}
+.folder {
+	@apply flex items-center gap-5 justify-between;
+}
+.button {
+	@apply relative flex items-center gap-3 whitespace-nowrap text-gray-500;
+
+	&.active {
+		@apply text-white;
+	}
+}
+.remove {
+	> svg {
+		@apply text-base;
+	}
+}

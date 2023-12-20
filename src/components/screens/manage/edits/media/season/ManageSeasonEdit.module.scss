@@ -1,0 +1,12 @@
+.wrapper {
+	@apply pt-16 pb-20;
+}
+.fill {
+	@apply flex items-start flex-wrap gap-10;
+}
+.field {
+	max-width: 400px;
+}
+.update {
+	@apply flex py-4 px-14 bg-purple-300 mt-20 rounded-medium mx-auto;
+}

@@ -1,0 +1,65 @@
+.upload {
+	@apply w-full animate-fade;
+}
+.uploadWrapper {
+	@apply flex flex-col items-start;
+}
+.uploadFill {
+	@apply flex flex-wrap gap-x-5;
+
+	.label {
+		@apply w-full inline-block mb-2;
+	}
+}
+.uploadBtn {
+	@apply w-fit py-3 px-10 rounded-small outline-border-none text-sm cursor-pointer font-semibold transition-all;
+	background: linear-gradient(26.57deg, #3c1a70 0%, rgba(93, 14, 245, 0.83));
+
+	&:focus {
+		@apply outline-border-none;
+	}
+
+	&:hover {
+		box-shadow: 0 0 30px 10px rgba(93, 14, 245, 0.3),
+			0 0 50px 30px rgba(93, 14, 245, 0.2), 0 0 60px 40px rgba(60, 26, 112, 0.2);
+	}
+}
+.uploadImage {
+	@apply hidden mt-5 relative animate-hide;
+
+	> img {
+		@apply image-like-bg rounded-md;
+	}
+
+	&.active {
+		aspect-ratio: 4 / 2;
+		@apply block w-full animate-fade;
+	}
+}
+.poster.active {
+	max-width: 300px;
+	aspect-ratio: 3 / 4;
+	@apply w-full;
+}
+.photo.active {
+	max-width: 200px;
+	aspect-ratio: 1 / 1;
+	@apply w-full rounded-full;
+
+	> img {
+		@apply rounded-full;
+	}
+}
+.error {
+	@apply text-red-300 font-light text-small mb-2;
+}
+.label {
+	@apply inline-block mb-2;
+}
+.modal {
+	> div {
+		@apply bg-gray-800;
+		width: 90%;
+		height: 90%;
+	}
+}

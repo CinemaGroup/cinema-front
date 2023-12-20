@@ -1,0 +1,17 @@
+.change {
+	@apply mt-2 font-light;
+
+	> span {
+		@apply text-purple-300;
+		font-size: 15px;
+	}
+}
+.submit {
+	@apply btn text-center w-full rounded-medium font-semibold transition-all duration-200 mt-3;
+	font-size: 18px;
+	padding: 15px 20px;
+}
+.lost {
+	@apply ml-auto text-purple-300 font-light mt-1;
+	font-size: 14px;
+}

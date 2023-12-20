@@ -1,0 +1,27 @@
+.wrapper {
+	@apply h-full w-full;
+}
+.files {
+	@apply w-full flex flex-wrap gap-5;
+}
+.file {
+	@apply relative w-full h-fit;
+	width: calc(100% / 9 - 18px);
+}
+.button {
+	@apply flex flex-col gap-2 justify-between w-full h-full;
+}
+.preview {
+	@apply w-full relative;
+	aspect-ratio: 1 / 1;
+}
+.name {
+	@apply w-full p-1.5 bg-gray-600 text-extra-small text-ellipsis whitespace-nowrap overflow-hidden;
+}
+.remove {
+	@apply p-2 bg-gray-900 flex items-center justify-center rounded-full absolute right-0 top-0;
+
+	> svg {
+		font-size: 21px;
+	}
+}
