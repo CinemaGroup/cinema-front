@@ -2,7 +2,7 @@
 
 import logo from '@/assets/images/global/logo.svg'
 import { SITE_NAME } from '@/constants/seo.constants'
-import { AuthType } from '@/shared/types/auth/auth.type'
+import { TypeAuth } from '@/shared/types/auth/auth.type'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC, useState } from 'react'
@@ -11,7 +11,7 @@ import AuthFormFields from './fields/AuthFormFields'
 import AuthFormGoogle from './google/AuthFormGoogle'
 
 const AuthForm: FC = () => {
-	const [type, setType] = useState<AuthType>('login')
+	const [type, setType] = useState<TypeAuth>('login')
 
 	return (
 		<>
