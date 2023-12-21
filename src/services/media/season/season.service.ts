@@ -1,13 +1,16 @@
 import { instance } from '@/api/api.interceptors'
 import { getSeasonsUrl } from '@/config/api.config'
-import { TypeSeasonInput } from './types/season.type'
 import { IFilteredSeasons } from '@/shared/interfaces/season/season.interface'
+import { TypeSeasonsQueryFilters } from '@/shared/types/season/season.type'
+import { TypeSeasonInput } from './types/season.type'
 
 export const SeasonService = {
 	// Admin Place
 
-	async getAll(mediaId: string) {
-		return instance.get<IFilteredSeasons>(getSeasonsUrl(`/media/${mediaId}`))
+	async getAll(queryDto = {} as TypeSeasonsQueryFilters) {
+		return instance.get<IFilteredSeasons>(getSeasonsUrl(''), {
+			params: queryDto,
+		})
 	},
 
 	async getById(id: string) {

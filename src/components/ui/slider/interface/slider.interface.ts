@@ -1,7 +1,9 @@
-import type { ReactElement } from 'react'
+import { ReactElement } from 'react'
 
 export interface ISlider {
 	slides: ReactElement[] | undefined
+	autoplayInterval: number
 	wrapperClassName?: string
-	slideClassName?: string
+	listClassName?: string
+	itemClassName?: string
 }

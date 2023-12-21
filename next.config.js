@@ -27,7 +27,8 @@ const nextConfig = {
 			},
 			{
 				source: '/uploads/:path*',
-				destination: 'https://vast-lime-brown-bear-robe.cyclic.app/uploads/:path*',
+				destination:
+					'https://vast-lime-brown-bear-robe.cyclic.app/uploads/:path*',
 			},
 		]
 	},

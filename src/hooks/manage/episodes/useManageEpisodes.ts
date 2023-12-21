@@ -18,7 +18,7 @@ export const useManageEpisodes = (seasonId: string) => {
 
 	const queryData = useQuery({
 		queryKey: ['get manage episodes list', searchTerm],
-		queryFn: () => EpisodeService.getAll(seasonId),
+		queryFn: () => EpisodeService.getAll({ seasonId, perPage: 10 }),
 		select: ({ data }) =>
 			data.episodes.map(
 				(episode): ITableItem => ({

@@ -1,9 +1,9 @@
 .wrapper {
-	@apply w-full relative overflow-hidden;
+	@apply relative overflow-hidden animate-fade;
 }
 .prev,
 .next {
-	@apply absolute z-1 p-2 bg-gray-700 rounded-full transition-colors hover:bg-gray-600/70;
+	@apply absolute z-1 p-2 rounded-full bg-gray-700 transition-colors hover:bg-purple-300;
 	top: calc(50% - 22px);
 
 	> svg {
@@ -11,11 +11,14 @@
 	}
 }
 .prev {
-	@apply left-0;
+	@apply left-5;
 }
 .next {
-	@apply right-0;
+	@apply right-5;
 }
-.slider{
-	@apply flex;
+.slider {
+	@apply flex transition-transform duration-700;
+}
+.slide {
+	@apply min-w-full;
 }

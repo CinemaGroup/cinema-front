@@ -1,13 +1,16 @@
 import { instance } from '@/api/api.interceptors'
 import { getEpisodesUrl } from '@/config/api.config'
 import { IFilteredEpisodes } from '@/shared/interfaces/episode/episode.interface'
+import { TypeEpisodesQueryFilters } from '@/shared/types/episode/episode.type'
 import { TypeEpisodeInput } from './types/episode.type'
 
 export const EpisodeService = {
 	// Admin Place
 
-	async getAll(mediaId: string) {
-		return instance.get<IFilteredEpisodes>(getEpisodesUrl(`/season/${mediaId}`))
+	async getAll(queryDto = {} as TypeEpisodesQueryFilters) {
+		return instance.get<IFilteredEpisodes>(getEpisodesUrl(''), {
+			params: queryDto,
+		})
 	},
 
 	async getById(id: string) {

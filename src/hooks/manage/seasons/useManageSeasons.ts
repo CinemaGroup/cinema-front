@@ -17,17 +17,14 @@ export const useManageSeasons = (mediaId: string) => {
 
 	const queryData = useQuery({
 		queryKey: ['get manage seasons list', searchTerm],
-		queryFn: () => SeasonService.getAll(mediaId),
+		queryFn: () => SeasonService.getAll({ mediaId, perPage: 10 }),
 		select: ({ data }) =>
 			data.seasons.map(
 				(season): ITableItem => ({
 					id: season.id,
 					editUrl: getAdminUrl(`/season/edit/${season.id}`),
 					episodeUrl: getAdminUrl(`/episodes/${season.id}`),
-					data: [
-						season.number, 
-						convertDate(season.createdAt)
-					],
+					data: [season.number, convertDate(season.createdAt)],
 					isVisible: season.isVisible,
 				})
 			),

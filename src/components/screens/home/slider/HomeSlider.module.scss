@@ -1,6 +1,53 @@
-.slide {
-	@apply w-1/2 aspect-video;
+.slider {
+	@apply mb-16 rounded-extra-big;
 }
-.link{
-	@apply w-full h-full relative;
+.slide {
+	aspect-ratio: 3 / 1.2;
+}
+.link {
+	@apply w-full h-full relative rounded-extra-big;
+
+	> img {
+		@apply rounded-extra-big;
+	}
+}
+.fill {
+	@apply relative z-1 left-0 right-0 top-0 bottom-0 w-full h-full flex items-end justify-start py-40 px-28;
+	background: radial-gradient(
+			circle,
+			rgba(0, 0, 0, 0) 0%,
+			rgba(0, 0, 0, 0.1) 100%
+		),
+		linear-gradient(90deg, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 60%),
+		linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%),
+		linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%),
+		linear-gradient(270deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%);
+}
+.box {
+	@apply w-full;
+	max-width: 660px;
+}
+.name {
+	@apply text-big font-bold leading-none mb-6 transition-colors hover:text-purple-300;
+}
+.excerpt {
+	@apply mb-6 text-gray-500 font-medium;
+	font-size: 18px;
+}
+.info {
+	@apply flex items-center gap-5 mb-6 font-medium;
+	font-size: 17px;
+}
+.genre {
+	@apply transition-colors hover:text-purple-300;
+}
+.buttons {
+	@apply flex items-center gap-10;
+}
+.play {
+	@apply btn-primary py-4 px-7 flex items-center gap-3 transition-transform duration-150;
+
+	> svg {
+		@apply w-6 h-6;
+	}
 }

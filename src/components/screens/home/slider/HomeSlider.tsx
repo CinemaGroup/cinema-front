@@ -14,7 +14,9 @@ const HomeSlider: FC = () => {
 			slides={media?.map((media) => (
 				<HomeSliderItem key={media.id} media={media} />
 			))}
-			slideClassName={styles.slide}
+			autoplayInterval={5000}
+			wrapperClassName={styles.slider}
+			itemClassName={styles.slide}
 		/>
 	)
 }

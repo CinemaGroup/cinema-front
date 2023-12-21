@@ -23,7 +23,7 @@ export interface IMedia {
 	year: number,
 	age: number,
 	countries: string[],
-	averageRating: number,
+	averageRating?: number,
 	totalViews: number,
 	totalLikes: number,
 	isMovie: boolean,
