@@ -1,0 +1,11 @@
+.heading{
+	@apply mb-8;
+}
+.movies {
+	@apply flex items-stretch gap-8;
+}
+.movie {
+	@apply w-full relative;
+	max-width: 300px;
+	aspect-ratio: 2 / 3;
+}

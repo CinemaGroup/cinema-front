@@ -5,7 +5,7 @@
 	aspect-ratio: 3 / 1.2;
 }
 .link {
-	@apply w-full h-full relative rounded-extra-big;
+	@apply cursor-pointer w-full h-full relative rounded-extra-big;
 
 	> img {
 		@apply rounded-extra-big;
@@ -13,15 +13,6 @@
 }
 .fill {
 	@apply relative z-1 left-0 right-0 top-0 bottom-0 w-full h-full flex items-end justify-start py-40 px-28;
-	background: radial-gradient(
-			circle,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(0, 0, 0, 0.1) 100%
-		),
-		linear-gradient(90deg, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 60%),
-		linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%),
-		linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%),
-		linear-gradient(270deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%);
 }
 .box {
 	@apply w-full;

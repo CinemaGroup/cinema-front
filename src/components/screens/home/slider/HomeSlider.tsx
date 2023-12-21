@@ -9,6 +9,8 @@ import HomeSliderItem from './item/HomeSliderItem'
 const HomeSlider: FC = () => {
 	const { media } = useRatedMedia()
 
+	if (!media) return null
+
 	return (
 		<Slider
 			slides={media?.map((media) => (

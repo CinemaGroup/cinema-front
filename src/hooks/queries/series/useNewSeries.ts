@@ -1,14 +1,15 @@
 import { MediaService } from '@/services/media/media.service'
 import { useQuery } from '@tanstack/react-query'
 
-export const useRatedMedia = () => {
+export const useNewSeries = () => {
 	const { data } = useQuery({
-		queryKey: ['get rated media'],
+		queryKey: ['get new series'],
 		queryFn: () =>
 			MediaService.getAll({
-				perPage: 10,
+				perPage: 15,
+				sort: 'newest',
+				isSeries: 'true',
 				isVisible: 'true',
-				sort: 'by-rating',
 			}),
 		select: ({ data }) => data,
 	})

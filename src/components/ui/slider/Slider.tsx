@@ -14,8 +14,6 @@ const Slider: FC<ISlider> = ({
 	listClassName,
 	itemClassName,
 }) => {
-	if (!slides) return null
-
 	const { currentIndex, isBeginning, isEnd, previous, next } = useSlider(
 		slides.length,
 		autoplayInterval
@@ -32,8 +30,11 @@ const Slider: FC<ISlider> = ({
 				className={cn(styles.slider, listClassName && listClassName)}
 				style={{ transform: `translateX(-${currentIndex * 100}%)` }}
 			>
-				{slides.map((slide) => (
-					<li className={cn(styles.slide, itemClassName && itemClassName)}>
+				{slides.map((slide, index) => (
+					<li
+						key={index}
+						className={cn(styles.slide, itemClassName && itemClassName)}
+					>
 						{slide}
 					</li>
 				))}

@@ -7,6 +7,7 @@ const ManageVisibility: FC = () => {
 			<button className={styles.filter}>
 				
 			</button>
+			<button className={styles.filter}></button>
 		</div>
 	)
 }

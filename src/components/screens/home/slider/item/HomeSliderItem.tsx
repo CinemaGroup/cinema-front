@@ -1,17 +1,24 @@
+'use client'
+
 import Icon from '@/components/ui/icon/Icon'
 import { IMedia } from '@/shared/interfaces/media/media.interface'
 import { convertMinutes } from '@/utils/converts/convert-minutes'
 import cn from 'classnames'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { FC } from 'react'
 import styles from '../HomeSlider.module.scss'
 
 const HomeSliderItem: FC<{ media: IMedia }> = ({ media }) => {
+	const { push } = useRouter()
+
 	return (
-		<Link
-			href={`/${media.isMovie ? 'movie' : 'series'}/${media.slug}`}
+		<div
 			className={styles.link}
+			onClick={() =>
+				push(`/${media.isMovie ? 'movie' : 'series'}/${media.slug}`)
+			}
 		>
 			<Image
 				priority
@@ -73,7 +80,7 @@ const HomeSliderItem: FC<{ media: IMedia }> = ({ media }) => {
 					</div>
 				</div>
 			</div>
-		</Link>
+		</div>
 	)
 }
 
