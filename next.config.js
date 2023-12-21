@@ -23,12 +23,12 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: 'https://vast-lime-brown-bear-robe.cyclic.app/api/:path*',
+				destination: 'https://orange-red-hatchling-hose.cyclic.app/api/:path*',
 			},
 			{
 				source: '/uploads/:path*',
 				destination:
-					'https://vast-lime-brown-bear-robe.cyclic.app/uploads/:path*',
+					'https://orange-red-hatchling-hose.cyclic.app/uploads/:path*',
 			},
 		]
 	},
