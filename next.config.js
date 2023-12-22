@@ -23,11 +23,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: 'https://fine-red-viper-tutu.cyclic.app/api/:path*',
+				destination: 'https://rose-uninterested-llama.cyclic.app/api/:path*',
 			},
 			{
 				source: '/uploads/:path*',
-				destination: 'https://fine-red-viper-tutu.cyclic.app/uploads/:path*',
+				destination: 'https://rose-uninterested-llama.cyclic.app/uploads/:path*',
 			},
 		]
 	},
