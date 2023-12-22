@@ -24,7 +24,6 @@ const ReactSelect: FC<IReactSelect> = ({
 	className,
 }) => {
 	const onChange = (newValue: unknown | OnChangeValue<IOption, boolean>) => {
-		console.log(newValue)
 		if (!newValue) return field.onChange(isMulti ? [] : '')
 		field.onChange(
 			isMulti
@@ -50,7 +49,6 @@ const ReactSelect: FC<IReactSelect> = ({
 			{isCreatable ? (
 				<CreatableSelect
 					classNamePrefix={`react-select`}
-					value={getValue()}
 					options={options}
 					isMulti={isMulti}
 					onChange={onChange}

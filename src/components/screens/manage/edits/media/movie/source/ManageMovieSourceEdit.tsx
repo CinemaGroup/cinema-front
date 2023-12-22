@@ -17,8 +17,6 @@ const ManageMovieSourceEdit: FC<IManageMovieSourceEdit> = ({
 		name: `movie.${variant}`,
 	})
 
-	console.log(fields)
-
 	return (
 		<div className={styles.sources}>
 			{fields.map((field, index) => (

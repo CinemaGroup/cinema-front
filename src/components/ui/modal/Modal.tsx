@@ -8,7 +8,6 @@ import { IModal } from './interface/modal.interface'
 
 const Modal: FC<PropsWithChildren<IModal>> = ({
 	children,
-	isOpen,
 	className,
 	closeModal,
 }) => {
@@ -17,15 +16,7 @@ const Modal: FC<PropsWithChildren<IModal>> = ({
 	if (!modalRef.current) return null
 
 	return ReactDOM.createPortal(
-		<div
-			className={cn(
-				styles.overlay,
-				{
-					[styles.show]: isOpen,
-				},
-				className && className
-			)}
-		>
+		<div className={cn(styles.overlay, className && className)}>
 			<div className={styles.window}>
 				<button onClick={closeModal} className={styles.close}>
 					<Icon name="X" />

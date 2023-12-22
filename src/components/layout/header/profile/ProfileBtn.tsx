@@ -33,9 +33,11 @@ const ProfileBtn: FC = () => {
 			>
 				<Icon name="User" size={32} />
 			</button>
-			<Modal isOpen={isModalOpen} closeModal={() => setIsModalOpen(false)}>
-				<AuthForm />
-			</Modal>
+			{isModalOpen && (
+				<Modal closeModal={() => setIsModalOpen(false)}>
+					<AuthForm />
+				</Modal>
+			)}
 		</>
 	)
 }

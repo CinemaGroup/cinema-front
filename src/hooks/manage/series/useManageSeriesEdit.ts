@@ -43,8 +43,6 @@ export const useManageSeriesEdit = (
 		}
 	}, [isError])
 
-	console.log(series)
-
 	const { mutateAsync: updateSeries } = useMutation({
 		mutationKey: ['update manage series'],
 		mutationFn: (data: TypeMediaInput) =>

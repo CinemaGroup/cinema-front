@@ -18,7 +18,5 @@ export const getKeys = <T extends object>(
 
 	traverse(obj)
 
-	console.log(keys)
-
 	return keys
 }

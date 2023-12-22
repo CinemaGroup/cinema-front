@@ -43,8 +43,6 @@ export const useManageMovieEdit = (
 		}
 	}, [isError])
 
-	console.log(movie)
-
 	const { mutateAsync: updateMovie } = useMutation({
 		mutationKey: ['update manage movie'],
 		mutationFn: (data: TypeMediaMovieInput) =>
