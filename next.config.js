@@ -23,11 +23,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: 'https://sore-lime-codfish-belt.cyclic.app/api/:path*',
+				destination: 'https://kind-tuna-sunglasses.cyclic.app/api/:path*',
 			},
 			{
 				source: '/uploads/:path*',
-				destination: 'https://sore-lime-codfish-belt.cyclic.app/uploads/:path*',
+				destination: 'https://kind-tuna-sunglasses.cyclic.app/uploads/:path*',
 			},
 		]
 	},
