@@ -5,8 +5,8 @@
 		@apply inline-block mb-2;
 	}
 
-	> input {
-		@apply w-full rounded-small outline-border-none bg-gray-800 py-2 px-4;
+	input {
+		@apply w-full rounded-small bg-gray-800 outline-border-none py-2 px-4;
 
 		&::placeholder {
 			@apply text-gray-500 text-smaller;
@@ -22,6 +22,12 @@
 			-moz-appearance: textfield;
 		}
 	}
+}
+.password {
+	@apply relative w-full;
+}
+.showPassword {
+	@apply absolute bottom-0 top-0 my-auto right-5;
 }
 .error {
 	@apply text-red-300 font-light text-small mb-2;

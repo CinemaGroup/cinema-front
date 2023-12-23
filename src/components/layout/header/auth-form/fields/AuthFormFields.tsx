@@ -37,7 +37,6 @@ const AuthFormFields: FC<IAuthForm> = ({ type, setType }) => {
 						},
 					})}
 					className={styles.field}
-					variant="custom"
 					label="Login"
 					error={errors.login}
 				/>
@@ -51,7 +50,6 @@ const AuthFormFields: FC<IAuthForm> = ({ type, setType }) => {
 					},
 				})}
 				className={styles.field}
-				variant="custom"
 				label="E-mail"
 				error={errors.email}
 			/>
@@ -64,7 +62,6 @@ const AuthFormFields: FC<IAuthForm> = ({ type, setType }) => {
 					},
 				})}
 				className={styles.field}
-				variant="custom"
 				type="password"
 				label="Password"
 				error={errors.password}

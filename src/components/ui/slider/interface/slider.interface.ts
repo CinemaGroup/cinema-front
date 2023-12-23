@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 
 export interface ISlider {
-	slides: ReactElement[]
+	slides: ReactElement[] | undefined
 	autoplayInterval: number
 	wrapperClassName?: string
 	listClassName?: string

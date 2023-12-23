@@ -1,5 +1,8 @@
+'use client'
+
 import cn from 'classnames'
-import { forwardRef } from 'react'
+import { forwardRef, useState } from 'react'
+import Icon from '../../icon/Icon'
 import styles from '../FormElements.module.scss'
 import { IField } from './interface/field.interface'
 
@@ -17,6 +20,12 @@ const Field = forwardRef<HTMLInputElement, IField>(
 		},
 		ref
 	) => {
+		const [showPassword, setShowPassword] = useState(false)
+
+		const toggleShowPassword = () => {
+			setShowPassword(!showPassword)
+		}
+
 		return (
 			<div
 				className={cn(
@@ -28,7 +37,26 @@ const Field = forwardRef<HTMLInputElement, IField>(
 			>
 				{label && <label>{label}</label>}
 				{error && <p className={styles.error}>{error.message}</p>}
-				<input ref={ref} type={type} {...rest} placeholder={placeholder} />
+				{type === 'password' ? (
+					<div className={styles.password} tabIndex={1}>
+						<input
+							ref={ref}
+							type={showPassword ? 'text' : type}
+							{...rest}
+							placeholder={placeholder}
+						/>
+						<button
+							type="button"
+							className={styles.showPassword}
+							onMouseDown={toggleShowPassword}
+							onMouseUp={toggleShowPassword}
+						>
+							<Icon name={showPassword ? 'EyeOff' : 'Eye'} size={22} />
+						</button>
+					</div>
+				) : (
+					<input ref={ref} type={type} {...rest} placeholder={placeholder} />
+				)}
 			</div>
 		)
 	}

@@ -20,10 +20,6 @@ export const useSlider = (steps: number, autoplayInterval: number) => {
 		})
 	}
 
-	const goTo = (index: number) => {
-		setCurrentIndex(index)
-	}
-
 	useEffect(() => {
 		let autoplayTimer: NodeJS.Timeout
 
@@ -42,6 +38,5 @@ export const useSlider = (steps: number, autoplayInterval: number) => {
 		isEnd,
 		previous,
 		next,
-		goTo,
 	}
 }

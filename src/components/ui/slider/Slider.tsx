@@ -14,6 +14,8 @@ const Slider: FC<ISlider> = ({
 	listClassName,
 	itemClassName,
 }) => {
+	if (!slides || slides.length === 0) return null
+
 	const { currentIndex, isBeginning, isEnd, previous, next } = useSlider(
 		slides.length,
 		autoplayInterval

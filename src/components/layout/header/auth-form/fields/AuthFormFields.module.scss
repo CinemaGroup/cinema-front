@@ -9,7 +9,7 @@
 		font-size: 15px;
 	}
 
-	> input {
+	input {
 		@apply bg-transparent rounded-medium transition-all text-gray-base outline-border-none;
 		padding: 8px 20px;
 		border: 1px solid rgba(0, 3, 28, 0.1);
@@ -17,5 +17,9 @@
 		&:focus {
 			@apply border-purple-300;
 		}
+	}
+
+	> div > input {
+		padding: 8px 70px 8px 20px;
 	}
 }

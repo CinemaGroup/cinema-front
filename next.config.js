@@ -23,11 +23,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: 'https://rose-uninterested-llama.cyclic.app/api/:path*',
+				destination: 'http://5.35.82.26:5000/api/:path*',
 			},
 			{
 				source: '/uploads/:path*',
-				destination: 'https://rose-uninterested-llama.cyclic.app/uploads/:path*',
+				destination: 'http://5.35.82.26:5000/uploads/:path*',
 			},
 		]
 	},

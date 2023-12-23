@@ -2,6 +2,7 @@
 
 import Icon from '@/components/ui/icon/Icon'
 import Modal from '@/components/ui/modal/Modal'
+import { useActions } from '@/hooks/queries/user/useActions'
 import { useProfile } from '@/hooks/queries/user/useProfile'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,19 +13,25 @@ import styles from './ProfileBtn.module.scss'
 const ProfileBtn: FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const { profile } = useProfile()
+	const { logout } = useActions()
 
 	return profile ? (
-		<Link href="/profile" className={styles.link}>
-			<Image
-				className={styles.avatar}
-				quality={100}
-				priority
-				fill
-				draggable={false}
-				src={profile.avatarPath}
-				alt={profile.login}
-			/>
-		</Link>
+		<>
+			<Link href="/profile" className={styles.link}>
+				<Image
+					className={styles.avatar}
+					quality={100}
+					priority
+					fill
+					draggable={false}
+					src={profile.avatarPath}
+					alt={profile.login}
+				/>
+			</Link>
+			<button onClick={logout}>
+				<Icon name='LogOut' />
+			</button>
+		</>
 	) : (
 		<>
 			<button
